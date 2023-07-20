@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">PetClock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stopwatch_buttonStart">START</string>
+    <string name="stopwatch_buttonLeft">STOP</string>
+    <string name="stopwatch_buttonRight">LAP</string>
+    <string name="stopwatch_buttonLeft2">RESUME</string>
+    <string name="stopwatch_buttonRight2">RESET</string>
+    <string name="close_creating_dialog_title">Save your changes or discard them?</string>
+    <string name="save_button">save</string>
+    <string name="discard_button">discard</string>
+    <string name="close_button">close</string>
+    <string name="default_alarm_name">None</string>
+    <string name="set_alarm_name_dialog_title">Alarm Name</string>
+    <string name="set_alarm_name_dialog_ok_button">ok</string>
+    <string name="set_alarm_name_dialog_cancel_button">cancel</string>
+    <string name="text_on">ON</string>
+    <string name="text_off">OFF</string>
+    <string name="alarm_dismiss">dismiss</string>
+    <string name="alarm_snooze">snooze</string>
+    <string name="title_activity_testing">TestingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

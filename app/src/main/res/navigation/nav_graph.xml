@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.lessons.petclock.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/createNewAlarm"
+            app:destination="@id/createAlarmFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createAlarmFragment"
+        android:name="com.lessons.petclock.alarmClockFragment.createAlarmFragment.CreateAlarmFragment"
+        android:label="CreateAlarmFragment"
+        tools:layout="@layout/fragment_create_alarm">
+        <argument
+            android:name="alarmId"
+            app:argType="java.util.UUID" />
+        <argument
+            android:name="isCreating"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/onBackPressedAction"
+            app:destination="@id/closeCreatingDialogFragment" />
+        <action
+            android:id="@+id/setAlarmName"
+            app:destination="@id/setNameDialogFragment" />
+        <action
+            android:id="@+id/setAlarmSound"
+            app:destination="@id/setAlarmSoundFragment" />
+        <action
+            android:id="@+id/setAlarmVibration"
+            app:destination="@id/setAlarmVibrationFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/closeCreatingDialogFragment"
+        android:name="com.lessons.petclock.alarmClockFragment.createAlarmFragment.CloseCreatingDialogFragment"
+        android:label="fragment_close_creating_dialog"
+        tools:layout="@layout/fragment_close_creating_dialog" />
+    <dialog
+        android:id="@+id/setNameDialogFragment"
+        android:name="com.lessons.petclock.alarmClockFragment.createAlarmFragment.SetNameDialogFragment"
+        android:label="fragment_set_name_dialog"
+        tools:layout="@layout/fragment_set_name_dialog" />
+    <fragment
+        android:id="@+id/setAlarmSoundFragment"
+        android:name="com.lessons.petclock.alarmClockFragment.setAlarmSoundFragment.SetAlarmSoundFragment"
+        android:label="fragment_set_alarm_sound"
+        tools:layout="@layout/fragment_set_alarm_sound" >
+        <argument
+            android:name="alarmId"
+            app:argType="java.util.UUID" />
+        <argument
+            android:name="soundTitle"
+            app:argType="string"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/setAlarmVibrationFragment"
+        android:name="com.lessons.petclock.alarmClockFragment.createAlarmFragment.SetAlarmVibrationFragment"
+        android:label="SetAlarmVibrationFragment"
+        tools:layout="@layout/fragment_set_alarm_vibration"/>
+</navigation>
